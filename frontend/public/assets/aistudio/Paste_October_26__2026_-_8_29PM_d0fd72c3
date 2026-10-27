@@ -1,0 +1,1275 @@
+# GOOGLE AI STUDIO MASTER PROMPT
+## Movement Craft — Premium Surprise Events & Special Moments Website
+
+Build a complete, professional, responsive website for **Movement Craft**, a surprise event planning business founded by Kuldeep Rajput, located in Chhatrapati Sambhaji Nagar (Aurangabad), Maharashtra, India.
+
+This is a real business website intended for public use. It must look professionally designed, feel authentic, work smoothly on mobile phones and laptops, and be straightforward for a non-technical owner to manage.
+
+Do not create a generic AI-looking website, a static design mockup, or a collection of buttons that do nothing. Build a polished, functional application with a strong visual identity, real navigation, interactive package customization, secure administration, and a backend architecture suitable for free-tier deployment.
+
+**Primary objective:** Customers should be able to open the website using a normal browser link or QR code, discover services and offers, explore packages and their inclusions, customize eligible packages, and contact the owner directly. The owner should be able to manage website content from a private admin panel without coding.
+
+Build the website now. Do not stop at writing a plan or explaining what you would build.
+
+---
+
+# 1. BRAND IDENTITY AND REFERENCE IMAGES
+
+Use the three attached reference images as the primary brand and content references.
+
+### Reference image 1: Movement Craft logo
+
+Use the supplied MC logo as the official brand logo.
+
+- Preserve its original design, lettering, proportions, and appearance.
+- Do not redraw, regenerate, distort, or replace the logo with a text approximation.
+- Use the supplied image asset wherever the full logo is appropriate.
+- Use a suitable crop or the original logo image for the browser favicon if practical.
+- Preserve image quality and transparency if the original asset supports it.
+- Provide sensible responsive sizing for the logo on mobile and desktop.
+- The logo should be visually prominent near the top of the website.
+
+### Reference image 2: Surprise-services menu
+
+Use this image to understand the initial range of services offered by Movement Craft.
+
+Initial service categories include:
+
+1. Midnight Surprise
+2. Cafe Surprise
+3. Indoor Surprise
+4. Theatre Surprise
+5. Outdoor Surprise
+6. Proposal Surprise
+7. Birthday Surprise
+8. Anniversary Surprise
+9. Rose Surprise
+10. Gift Surprise
+11. Family Surprise
+12. Love Letter Surprise
+13. Just Because Surprise
+14. Special Surprise
+15. And Many More / Custom Surprise
+
+These are the initial categories, not a permanent limit.
+
+Every service category must be manageable through the admin panel. The owner must be able to create new categories, rename existing categories, change descriptions, change images, change display order, hide categories, publish categories, and delete categories after confirmation.
+
+Do not require code changes to introduce new types of surprises in the future.
+
+### Reference image 3: Package designs
+
+Use this image to understand the initial package concepts and their listed inclusions.
+
+The reference includes examples such as:
+
+**Birthday Surprise**
+- Fire entry
+- Smoke entry
+- Birthday cake
+- Return gift
+- Photography and reel
+
+**Midnight Surprise**
+- Home entrance decoration
+- Cake supplied by the business, where indicated
+- Ring or gift supplied by the business, where indicated
+- Return gift supplied by the business, where indicated
+- Special midnight setup
+
+**Theatre Surprise**
+- Fire entry
+- Smoke entry
+- Big-screen photo or video display
+- Interval surprise clip
+- Cake and special moment
+
+**Cafe Surprise**
+- Premium cafe decoration
+- Cake, where supplied by the business
+- Ring or gift, where supplied by the business
+- Return gift, where supplied by the business
+- Photography and reel
+
+**Proposal or Special Surprise**
+- Romantic decoration
+- Special entry
+- Ring setup
+- Cake, where supplied by the business
+- Cinematic photography and reel
+
+Treat these as initial content references, not proof of currently available inventory or confirmed business commitments.
+
+Where an inclusion is marked as supplied by the business in the reference, communicate this accurately. Do not silently change who supplies an item.
+
+Create an editable data structure for the initial services and package concepts. Allow the owner to modify all of them later.
+
+**Important:** The reference images do not provide verified prices. Do not invent prices, discount amounts, customer reviews, customer names, ratings, or claims about completed events. Unspecified prices should display a tasteful label such as “Contact for pricing” until the owner adds an actual price.
+
+---
+
+# 2. BUSINESS INFORMATION
+
+Use the following information throughout the appropriate sections of the website.
+
+Business name: Movement Craft
+
+Founder: Kuldeep Rajput
+
+Business type: Surprise event planning and special-moment decoration.
+
+Location: Chhatrapati Sambhaji Nagar (Aurangabad), Maharashtra, India.
+
+Phone number: +91 8793877192
+
+WhatsApp number: +91 8793877192
+
+Instagram profile:
+https://www.instagram.com/movementcraft.events/
+
+Preferred Instagram handle:
+@movementcraft.events
+
+Main tagline:
+
+“Hum sirf event plan nahi karte, yaadein banate hai, apno ke saath.”
+
+The tagline must be editable through the admin panel. The owner should also be able to hide it or remove it entirely.
+
+Possible supporting brand lines, if they fit the design:
+
+- “You choose the moment. We craft the memory.”
+- “Creating moments, not just events.”
+- “Every surprise has a story.”
+
+Treat supporting taglines as optional editable content.
+
+Use English as the website's initial language. Preserve the Hindi tagline exactly as supplied.
+
+Do not invent a street address, email address, registered business status, awards, certifications, or other unprovided business information.
+
+---
+
+# 3. DESIGN DIRECTION
+
+The website should have the visual quality of a premium event-planning brand.
+
+## Color palette
+
+Take inspiration directly from the supplied logo and promotional designs.
+
+Use a carefully balanced palette of:
+
+- Deep black and charcoal backgrounds.
+- Elegant metallic gold accents.
+- Warm champagne and cream text.
+- Subtle amber highlights.
+- Soft neutral shades for secondary content.
+
+Avoid excessive bright colors, random gradients, overly saturated backgrounds, and generic blue-and-purple AI website styling.
+
+Gold should be used purposefully for highlights, buttons, borders, icons, and selected headings. Avoid making every element gold.
+
+## Typography
+
+Use an elegant display typeface for major brand headings and a highly readable modern font for body text.
+
+Pair the typography thoughtfully. Headings can have a refined editorial or luxury-event aesthetic, while paragraphs, prices, package details, and navigation must remain easy to read.
+
+Do not use excessive decorative script fonts for important information.
+
+## Visual style
+
+Use visual inspiration from the supplied promotional images:
+
+- Elegant gold borders.
+- Well-structured service and package cards.
+- Warm event photography.
+- Subtle ornamental details.
+- Refined spacing.
+- High-quality composition.
+- Carefully aligned typography.
+- Consistent iconography.
+
+Do not reproduce the promotional posters literally as the website layout. Convert their visual language into a modern, responsive web design.
+
+The result must feel custom-made for Movement Craft rather than copied from a template.
+
+## Animations
+
+Use restrained animations that enhance the experience:
+
+- A lightweight logo line-drawing effect for the initial loader, if feasible.
+- Subtle fade-ins and small transitions.
+- Gentle hover effects on desktop.
+- Smooth but not excessive scrolling effects.
+- Small interactive feedback on buttons and controls.
+
+Avoid heavy particle systems, continuously moving backgrounds, excessive blur, large animation libraries, and anything that creates noticeable lag on ordinary mobile devices.
+
+Honor reduced-motion preferences where practical.
+
+Animations must not block access to the website for long periods. The loading animation must finish quickly and must never create an infinite loading screen.
+
+---
+
+# 4. WEBSITE STRUCTURE AND HOMEPAGE
+
+Build a cohesive website with clear navigation and multiple meaningful sections. A single-page public experience with navigable sections is acceptable if it remains well organized. Individual service or package detail views may use dedicated routes or accessible modal/dialog views where appropriate.
+
+The public website must not require customers to register or log in.
+
+## Section A: Header
+
+At the top of the website, display the Movement Craft brand prominently.
+
+Include:
+
+- Official logo.
+- Movement Craft name.
+- Simple navigation.
+- Services.
+- Packages.
+- Offers.
+- Gallery.
+- About.
+- Contact.
+
+On mobile, use a compact, accessible navigation menu.
+
+The header should look premium, remain readable, and avoid occupying too much vertical space.
+
+A sticky header is acceptable if implemented without obstructing the content.
+
+## Section B: Hero area
+
+Create a beautiful opening section featuring:
+
+- Movement Craft branding.
+- The editable main tagline.
+- A concise explanation of the business.
+- A strong “Explore Services” action.
+- A “View Packages” action.
+- A clear “Contact on WhatsApp” action.
+
+Use a high-quality event image or a carefully composed visual background. Keep text contrast strong.
+
+The first screen must immediately communicate that Movement Craft creates surprise events and memorable special moments.
+
+Do not overload the hero area with too many buttons, paragraphs, badges, or promotional claims.
+
+## Section C: Offers
+
+Place the offers section near the top of the homepage, directly after the hero or in another prominent position that suits the layout.
+
+Each offer card may contain:
+
+- Offer title.
+- Short description.
+- Relevant image.
+- Applicable service or package.
+- Original price, if genuinely provided.
+- Offer price, if genuinely provided.
+- Validity dates, if provided.
+- A button to explore the offer or contact the owner.
+
+The owner must manage offers from the admin panel.
+
+Offer functionality must support:
+
+- Creating offers.
+- Editing offers.
+- Deleting offers with confirmation.
+- Publishing and hiding offers.
+- Setting start and end dates.
+- Marking offers as featured.
+- Selecting associated packages or services.
+- Displaying original and discounted prices when applicable.
+- Automatically hiding expired offers.
+- Manually deactivating an offer.
+
+Only show a discount or crossed-out original price when the owner has supplied the corresponding values.
+
+Expired offers must not remain advertised as currently active.
+
+If there are no active offers, hide the empty offer grid or display a subtle, professionally designed message. Do not invent offers simply to fill the page.
+
+## Section D: Surprise services
+
+Display the initial service categories based on the attached services reference image.
+
+Use attractive cards with:
+
+- Service image or illustration.
+- Service name.
+- Short description.
+- A “View Details” action.
+- An optional contact action.
+
+The owner must be able to add unlimited service categories in practice, subject to sensible technical limits and the selected hosting plan.
+
+Do not hardcode the categories into the frontend as an uneditable permanent list.
+
+The website must load the published categories from the backend when backend integration is configured.
+
+The service grid must adapt automatically to the number of categories available.
+
+For example, if the owner adds a new service category through the admin panel, it should appear on the public website after saving, without a code change or redeployment.
+
+## Section E: Packages
+
+Display the initial package concepts using the attached package reference image.
+
+Use elegant, consistent cards that present the package name, image, short description, and relevant inclusions.
+
+When a customer selects a package, show its full details in an accessible detail page or dialog.
+
+The detailed view should include:
+
+- Package name.
+- Full description.
+- Package image or gallery.
+- Listed price, if configured.
+- Original and discounted prices, if configured.
+- Complete inclusions list.
+- Optional add-ons, where available.
+- Clarification of who supplies items where necessary.
+- Relevant terms and conditions.
+- A customization option when enabled.
+- A contact or enquiry action.
+
+Avoid cramming all details into the initial card. The first view should remain easy to scan, while the details view should provide the full information.
+
+The owner must be able to add, edit, hide, publish, reorder, and delete packages.
+
+Enforce a maximum of 25 packages in the admin interface and backend validation. This is an internal management limit only. Do not display package counts, capacity warnings, or this technical limit on the public website.
+
+If the limit is reached, explain it only inside the admin panel.
+
+## Section F: Custom surprises
+
+Include a section for customers who want something different from the listed packages.
+
+Possible copy:
+
+“Have something special in mind? Let's create a surprise around your moment.”
+
+Provide a button that opens WhatsApp with a prefilled message asking about a custom surprise.
+
+Do not promise services that the owner has not confirmed. The wording should invite discussion rather than guarantee availability.
+
+## Section G: Gallery
+
+Create a responsive gallery section for event photographs and videos.
+
+The initial gallery should be empty because verified business photos and videos are not yet available.
+
+When empty, display a tasteful message such as:
+
+“Our moments gallery is coming soon.”
+
+Do not generate fake portfolio entries, fake customer events, or fabricated before-and-after comparisons.
+
+The owner must be able to add, edit captions, reorder, hide, publish, and remove gallery items from the admin panel.
+
+Support image uploads and video links or video uploads where supported by the selected storage solution.
+
+Optimize image delivery for mobile devices.
+
+An image viewer/lightbox may be included, with keyboard and mobile-friendly close controls.
+
+## Section H: Testimonials
+
+Include a small testimonials section in the lower part of the homepage, above the footer.
+
+The design should feel authentic and understated rather than exaggerated.
+
+Do not create AI-generated customer testimonials or pretend that fictional people are real customers.
+
+Initially, keep the section hidden if no genuine, approved testimonials exist.
+
+Allow the owner to add genuine testimonials and optionally provide:
+
+- Customer display name.
+- Review text.
+- Star rating.
+- Optional customer image, only when appropriate and authorized.
+- Publication status.
+
+The owner should be able to edit, hide, publish, and delete testimonials.
+
+Only published testimonials should be visible to public visitors.
+
+No fake average rating or fabricated review count.
+
+## Section I: About Movement Craft
+
+Create a concise, professional About section that explains the business's purpose: planning surprises and helping customers celebrate personal moments.
+
+Use the supplied founder name, location, and brand identity.
+
+Keep the section editable through the admin panel.
+
+Do not invent a company history, number of years in business, number of completed events, staff members, awards, or client statistics.
+
+## Section J: Contact
+
+Include a clean contact section with:
+
+- Phone number.
+- WhatsApp button.
+- Instagram button.
+- Location text: Chhatrapati Sambhaji Nagar, Maharashtra.
+- A brief invitation to discuss a surprise or request a quotation.
+
+Do not require customers to fill out a form or create an account.
+
+Do not add a fake booking calendar or payment flow.
+
+## Section K: Footer
+
+The footer should include:
+
+- Movement Craft branding.
+- A short editable tagline.
+- Quick navigation links.
+- Phone and WhatsApp links.
+- Instagram profile link.
+- City and state.
+- A Terms and Conditions link.
+- Any other essential footer information.
+
+The footer should remain visually consistent with the black-and-gold brand.
+
+---
+
+# 5. PACKAGE CUSTOMIZATION SYSTEM
+
+Build a real, interactive package customization feature for packages where the owner has enabled customization.
+
+Not every package must be customizable.
+
+## Customer experience
+
+When the customer opens a customizable package, show the standard package details and any configured base price.
+
+Below the inclusions, provide an optional “Customize Package” button.
+
+The customer should be able to add from the beginning only those extras that the owner has configured as available add-ons.
+
+Do not allow customers to modify the base package itself, invent new items, alter prices, or remove mandatory inclusions.
+
+Each add-on should display:
+
+- Item name.
+- Brief description, where useful.
+- Price.
+- A clear selection control.
+
+When an add-on is selected or deselected, update the customization summary immediately.
+
+Display:
+
+- Base package price, if configured.
+- Each selected add-on.
+- Individual add-on prices.
+- Subtotal of selected add-ons.
+- Final estimated total, where all necessary prices are available.
+
+Use accurate INR formatting.
+
+Calculate totals using numeric values stored in the backend, not by parsing formatted price strings.
+
+Use integer paise for INR monetary calculations where appropriate, to avoid floating-point rounding errors.
+
+If the base package or a selected add-on does not have a configured price, do not invent one or show a misleading total. Instead, clearly state that the final quotation must be confirmed by the owner.
+
+Provide buttons such as:
+
+- “Contact Owner for Quotation”
+- “Discuss This Package on WhatsApp”
+
+The final action must open WhatsApp with a prefilled message containing the package name, displayed base price when available, selected add-ons, their prices, and calculated total when valid.
+
+The customer must still manually send the message.
+
+Clearly label the total as an estimate where final pricing depends on availability, location, or other requirements.
+
+Do not treat customization as a confirmed order or booking.
+
+## Admin customization controls
+
+For every package, the owner should be able to:
+
+- Enable or disable customization.
+- Set a base price or leave it unlisted.
+- Add optional extras.
+- Edit extra names, descriptions, and prices.
+- Hide or remove an extra.
+- Mark inclusions as mandatory.
+- Reorder extras.
+- Control whether a package is published.
+
+If customization is disabled for a package, hide the customization interface on the public site.
+
+All pricing and package information must come from trusted backend data once connected.
+
+---
+
+# 6. REAL CONTACT LINKS
+
+Use the actual supplied contact details.
+
+## Phone
+
+Use the international phone format:
+
++918793877192
+
+The phone action should use a valid `tel:` link so that mobile users can initiate a call.
+
+## WhatsApp
+
+Use a direct WhatsApp link for the supplied number:
+
+https://wa.me/918793877192
+
+Add contextual prefilled messages for service, package, offer, and custom enquiry actions.
+
+Do not automatically send any message. Opening WhatsApp is not the same as submitting an enquiry.
+
+Ensure the links work on mobile and desktop. If the WhatsApp app is installed, the link should use the platform's normal app-opening behavior where supported.
+
+## Instagram
+
+Use:
+
+https://www.instagram.com/movementcraft.events/
+
+Create a clear Instagram button that opens the real profile.
+
+Do not embed fake Instagram posts or display fabricated follower counts.
+
+## Floating WhatsApp button
+
+Add a floating WhatsApp button where it improves usability, especially on mobile.
+
+Ensure it does not cover essential content, package controls, or footer links.
+
+Provide an accessible label and maintain a consistent visual style.
+
+---
+
+# 7. ADMIN PANEL
+
+The admin panel is a core feature, not an optional decorative page.
+
+Create a private route such as `/admin`, with an optional discreet Admin Login link in the footer.
+
+Public visitors must not need an account.
+
+Only authorized administrators may modify website content.
+
+## Authentication requirements
+
+Use a proper authentication system, preferably Supabase Auth.
+
+The owner has supplied two initial password values for private setup. Treat these as confidential credentials.
+
+Do not:
+
+- Put passwords in public JavaScript.
+- Store passwords as plain text in the database.
+- Hardcode passwords in frontend conditionals.
+- Expose service-role keys in browser code.
+- Implement a fake login that grants access merely by checking a client-side string.
+- Publish credentials in the source repository or build output.
+
+Create a secure setup process for the authorized admin accounts, with the credentials configured privately through the authentication provider or a protected server-side setup mechanism.
+
+Both authorized credentials may exist, but restrict administration to one active admin session at a time where practical. Use secure session handling and do not permit anonymous access to admin operations.
+
+The owner should be able to use the admin panel without technical knowledge after the initial deployment.
+
+If session limits require server-side coordination, implement them securely. Do not pretend that a client-only session flag provides a reliable global single-session restriction.
+
+Do not create public self-registration for administrators.
+
+## Admin dashboard
+
+After login, show a simple dashboard with useful summary counts, such as:
+
+- Published services.
+- Published packages.
+- Active offers.
+- Gallery items.
+- Published testimonials.
+
+These counts must reflect actual stored data, not hardcoded sample numbers.
+
+Include clear navigation to the content management sections.
+
+Suggested sections:
+
+1. Dashboard
+2. Services
+3. Packages
+4. Offers
+5. Gallery
+6. Testimonials
+7. Website Settings
+8. Logout
+
+The interface should be understandable to a non-technical owner.
+
+Use plain labels, clear save feedback, helpful validation, and confirmation dialogs for destructive actions.
+
+## Content management
+
+The owner must be able to create, read, update, publish, hide, reorder, and delete content as appropriate.
+
+### Services management
+
+Support editing:
+
+- Service name.
+- Slug or URL identifier.
+- Short description.
+- Full description.
+- Image.
+- Category.
+- Display order.
+- Published or hidden status.
+- Contact button text.
+- Optional related packages.
+
+### Packages management
+
+Support editing:
+
+- Package name.
+- Short description.
+- Full description.
+- Package image.
+- Price.
+- Discounted price.
+- Currency.
+- Inclusions.
+- Optional add-ons.
+- Customization enabled or disabled.
+- Terms and notes.
+- Related service category.
+- Display order.
+- Published or hidden status.
+
+Enforce the 25-package maximum in both the user interface and trusted backend logic.
+
+### Offers management
+
+Support:
+
+- Offer name.
+- Description.
+- Image.
+- Original price, when applicable.
+- Offer price, when applicable.
+- Discount information, when applicable.
+- Start date and end date.
+- Related packages or services.
+- Featured status.
+- Manual active/inactive control.
+- Published status.
+
+Automatically exclude expired offers from the public active offers list.
+
+### Gallery management
+
+Support:
+
+- Uploading images.
+- Adding video URLs or supported video files.
+- Captions.
+- Alt text.
+- Category.
+- Display order.
+- Published or hidden status.
+- Replacing and deleting assets.
+
+### Testimonials management
+
+Support:
+
+- Adding genuine customer testimonials.
+- Editing text.
+- Editing the customer's display name.
+- Optional star rating.
+- Optional authorized photo.
+- Publishing or hiding a testimonial.
+- Deleting with confirmation.
+
+### Website settings
+
+Allow the owner to edit:
+
+- Tagline.
+- About text.
+- Phone number.
+- WhatsApp number.
+- Instagram URL.
+- Location text.
+- Hero heading.
+- Hero description.
+- Hero image.
+- Footer text.
+- Terms and Conditions.
+- Visibility of selected homepage sections.
+- Selected contact button labels.
+
+If a section is hidden, it should disappear from the public website without breaking navigation or layout.
+
+## Saving and live updates
+
+Every successful save must persist to the database and update the public website without requiring a redeployment or code change.
+
+Use a real backend and appropriate cache invalidation or data refresh. If supported by the chosen architecture, use realtime subscriptions to update open public pages when published content changes.
+
+At minimum, a newly opened or refreshed public page must load the latest saved data.
+
+Do not claim that changes are saved until the backend confirms success.
+
+Provide:
+
+- A visible saving state.
+- Success confirmation.
+- Clear error messages.
+- Validation for invalid or missing fields.
+- Protection against accidental double submission.
+- Confirmation before deletion.
+
+Do not silently discard unsaved changes.
+
+A failed save must not falsely show success.
+
+---
+
+# 8. BACKEND AND DATA MODEL
+
+Use Supabase for persistent database storage, authentication, and file storage where appropriate, subject to the available free-tier features and limits.
+
+Use a clear, maintainable schema.
+
+Suggested tables:
+
+### `services`
+
+- `id`
+- `name`
+- `slug`
+- `short_description`
+- `description`
+- `image_path`
+- `category`
+- `display_order`
+- `is_published`
+- `created_at`
+- `updated_at`
+
+### `packages`
+
+- `id`
+- `name`
+- `slug`
+- `short_description`
+- `description`
+- `image_path`
+- `base_price_paise`, nullable
+- `original_price_paise`, nullable
+- `currency`
+- `inclusions`, structured data
+- `customization_enabled`
+- `terms`
+- `service_id`, nullable
+- `display_order`
+- `is_published`
+- `created_at`
+- `updated_at`
+
+### `package_addons`
+
+- `id`
+- `package_id`
+- `name`
+- `description`
+- `price_paise`, nullable
+- `is_available`
+- `display_order`
+- `created_at`
+- `updated_at`
+
+### `offers`
+
+- `id`
+- `title`
+- `description`
+- `image_path`
+- `original_price_paise`, nullable
+- `offer_price_paise`, nullable
+- `discount_type`, nullable
+- `discount_value`, nullable
+- `start_at`, nullable
+- `end_at`, nullable
+- `is_featured`
+- `is_active`
+- `is_published`
+- `created_at`
+- `updated_at`
+
+### `gallery_items`
+
+- `id`
+- `media_type`
+- `image_path`, nullable
+- `video_url`, nullable
+- `caption`
+- `alt_text`
+- `category`
+- `display_order`
+- `is_published`
+- `created_at`
+- `updated_at`
+
+### `testimonials`
+
+- `id`
+- `display_name`
+- `review_text`
+- `rating`, nullable
+- `image_path`, nullable
+- `is_published`
+- `display_order`
+- `created_at`
+- `updated_at`
+
+### `site_settings`
+
+Use a suitable structured settings table or a well-validated key/value model to store editable website text, contact information, section visibility, and hero settings.
+
+Adapt the schema when necessary, but keep it normalized and maintainable. Use appropriate foreign keys, indexes, constraints, timestamps, and validation.
+
+The public frontend must retrieve real published content from the backend.
+
+Do not make the production website dependent on hardcoded mock arrays.
+
+For the initial prototype, if the backend has not yet been connected, use clearly separated sample data as a temporary development fallback. Label it as development-only in code and document how to replace it. Never silently fall back to fabricated production testimonials, offers, prices, or portfolio entries.
+
+---
+
+# 9. SECURITY AND DATABASE PERMISSIONS
+
+Security is mandatory.
+
+Configure Supabase Row Level Security (RLS) and appropriate policies.
+
+Requirements:
+
+- Anonymous visitors may read only published public content.
+- Anonymous visitors must not insert, update, or delete administrative content.
+- Only authorized authenticated admins may create, edit, publish, hide, or delete content.
+- Only authorized admins may upload, replace, or delete administrative assets.
+- Storage policies must follow the same permission model.
+- Do not expose the Supabase service-role key in frontend environment variables or browser bundles.
+- Use only public client credentials in the frontend.
+- Keep sensitive operations server-side when needed.
+- Validate all submitted content.
+- Enforce the package limit through trusted backend validation, not just a disabled frontend button.
+- Prevent unauthorized users from bypassing the admin login by calling database APIs directly.
+- Do not use a client-side role flag as the sole source of authorization.
+- Do not include secrets in logs, error messages, or public configuration.
+- Avoid exposing private administrative information through public queries.
+
+If server-side functions are necessary, use supported Supabase Edge Functions or an equivalent secure server-side mechanism.
+
+Provide clear setup instructions for applying database migrations and RLS policies.
+
+Do not mark the application as production-ready until the authentication, policies, storage permissions, and public/admin access have been checked.
+
+---
+
+# 10. IMAGE STORAGE AND PERFORMANCE
+
+Use Supabase Storage or another suitable free-tier-compatible storage service for uploaded media.
+
+Do not store large binary image files directly in ordinary database fields.
+
+Allow the owner to upload images from a mobile phone or laptop.
+
+Where practical:
+
+- Validate file type and file size.
+- Optimize uploaded images.
+- Generate suitable responsive sizes.
+- Use modern image formats when supported.
+- Lazy-load below-the-fold images.
+- Use explicit image dimensions or aspect ratios to prevent layout shifts.
+- Show a preview before publishing.
+- Display helpful upload progress and error states.
+- Handle missing or deleted assets gracefully.
+
+If the selected free-tier storage service has upload limits, explain them in the setup documentation.
+
+Do not promise unlimited storage or bandwidth.
+
+The website should load quickly on normal mobile internet connections.
+
+Avoid large unnecessary libraries, oversized videos, excessive JavaScript, and blocking animations.
+
+---
+
+# 11. RESPONSIVE DESIGN AND ACCESSIBILITY
+
+Mobile phones are the primary target, but the website must also work properly on laptops and desktop screens.
+
+Implement responsive layouts rather than simply shrinking the desktop design.
+
+Check:
+
+- Small Android screens.
+- Common smartphone screen widths.
+- Tablet layouts.
+- Laptop screens.
+- Wider desktop screens.
+
+Use touch-friendly buttons and controls.
+
+Ensure:
+
+- No horizontal overflow.
+- No overlapping text.
+- No clipped prices.
+- No inaccessible dropdowns.
+- No tiny tap targets.
+- No dialogs extending beyond the viewport.
+- No broken navigation on mobile.
+- Package customization works with touch input.
+- Admin forms are usable on phones.
+
+Use semantic HTML, accessible labels, keyboard navigation, visible focus states, appropriate contrast, and descriptive alt text.
+
+Respect reduced-motion preferences.
+
+---
+
+# 12. TERMS, CONTACT AND CUSTOMER EXPECTATIONS
+
+Create a short editable Terms and Conditions section accessible from the footer.
+
+Use straightforward wording to explain:
+
+- Website information is provided for enquiry purposes.
+- Displayed packages and prices, where available, may require confirmation.
+- Availability and final arrangements must be confirmed directly with Movement Craft.
+- Optional extras and customization are subject to owner confirmation.
+- The website does not itself confirm bookings or process payments.
+- A WhatsApp message is a customer enquiry, not a confirmed booking.
+- Any applicable cancellation or payment conditions must be confirmed with the owner.
+
+Do not invent specific refund policies, deposit amounts, legal registrations, guarantees, or contractual obligations.
+
+Keep terms editable by the owner.
+
+A separate privacy notice is not a priority for the initial version, but avoid collecting unnecessary customer data or adding hidden tracking.
+
+---
+
+# 13. SEO AND SHARING
+
+Set up basic search-engine and social-sharing support.
+
+Include:
+
+- Appropriate page title.
+- Meta description.
+- Favicon based on the supplied logo.
+- Open Graph title, description, and image where appropriate.
+- A canonical URL configuration that can be updated after deployment.
+- Descriptive page headings.
+- Semantic section structure.
+- Meaningful image alt text.
+- A simple sitemap and robots configuration if supported by the framework and deployment.
+
+Suggested page title:
+
+“Movement Craft | Surprise Events & Special Moments”
+
+Suggested description:
+
+“Discover surprise event planning, birthday celebrations, romantic setups, proposal surprises, and special moments with Movement Craft in Chhatrapati Sambhaji Nagar, Maharashtra.”
+
+Keep the text editable or easy to update.
+
+Do not add fake structured ratings or fabricated review metadata.
+
+Ensure that the deployed website can be shared through a stable HTTPS URL.
+
+The owner should be able to create a QR code pointing to that public URL. The QR code is simply a convenient way to open the website and does not require a special app.
+
+Do not generate a QR code for a temporary preview URL that will later change. Explain when to create the final QR code after deployment.
+
+---
+
+# 14. LOADING, ERROR AND EMPTY STATES
+
+Build a polished experience for normal conditions and failures.
+
+## Initial loading
+
+Create a lightweight logo animation inspired by the gold line-drawing effect in the supplied brand visuals.
+
+Keep it short, elegant, and responsive.
+
+Do not keep the user waiting for the entire application to initialize before showing useful content unnecessarily.
+
+## Database unavailable
+
+If the database is temporarily unreachable:
+
+- Do not crash the entire website.
+- Show a clear, friendly message.
+- Offer a retry option.
+- Keep the page structure intact where possible.
+- Do not falsely indicate that an admin save succeeded.
+- Do not expose internal database errors or secrets.
+
+## Empty offers
+
+Hide the offer section or show a tasteful empty state when no active offers exist.
+
+## Empty gallery
+
+Show a polished “Our moments gallery is coming soon” message.
+
+## Empty testimonials
+
+Hide the section until genuine testimonials are published, or use a subtle empty state if that better suits the final design.
+
+## Expired offer
+
+Do not advertise an expired offer as active. If a visitor opens a direct link to an expired offer, display a clear message and provide a route back to current services or WhatsApp.
+
+## Missing images
+
+Use a consistent, elegant fallback image or placeholder. A missing image must not break the layout.
+
+## Not found
+
+Create a branded 404 page with a link back to the homepage.
+
+Do not let loading states, modals, or failed network requests trap the user.
+
+---
+
+# 15. FREE-TIER DEPLOYMENT PLAN
+
+Prepare the application for deployment using free-tier services, subject to current provider policies and limits.
+
+Preferred architecture:
+
+- **Frontend:** React with TypeScript, using a suitable supported framework and build system.
+- **Styling:** A maintainable responsive CSS system or lightweight styling framework.
+- **Backend/database:** Supabase.
+- **Authentication:** Supabase Auth or an equivalent secure supported method.
+- **File storage:** Supabase Storage, subject to the chosen plan's limits.
+- **Hosting:** Cloudflare Pages if compatible with the selected framework and application architecture.
+
+If the selected framework requires server-side rendering or server-side functions not supported by the intended hosting arrangement, choose a compatible architecture or explain the additional deployment requirement. Do not assume that every application can be hosted unchanged on a static hosting service.
+
+Prefer a static frontend with secure backend services where that meets the requirements.
+
+Use environment variables for public configuration and keep server-only secrets separate.
+
+Document the required environment variables, including the appropriate public Supabase URL and public anonymous/publishable key where applicable.
+
+Never put a Supabase service-role key or authentication secret into public frontend configuration.
+
+Do not assume that every provider feature is free forever. Explain the relevant free-tier limits and any possible future costs in the deployment documentation.
+
+Do not require a paid custom domain for the initial launch.
+
+Use the hosting provider's free subdomain initially.
+
+---
+
+# 16. CODE QUALITY AND PROJECT ORGANIZATION
+
+Build maintainable, understandable code.
+
+Use reusable components for:
+
+- Header.
+- Footer.
+- Hero.
+- Offer cards.
+- Service cards.
+- Package cards.
+- Package detail view.
+- Package customization.
+- Gallery.
+- Testimonials.
+- Contact actions.
+- Admin navigation.
+- Admin forms.
+- Loading and error states.
+- Confirmation dialogs.
+
+Keep business data separate from presentation components.
+
+Use TypeScript types or equivalent validation for the main data models.
+
+Use reusable utilities for:
+
+- INR currency formatting.
+- Price calculations.
+- Date and offer validity checks.
+- WhatsApp link generation.
+- Image handling.
+- Form validation.
+- Authentication and authorization checks.
+
+Do not put the entire website into one enormous component.
+
+Avoid unnecessary dependencies and duplicate code.
+
+Use stable identifiers for database records. Do not use array indexes as permanent database IDs.
+
+Handle asynchronous operations carefully and clean up subscriptions when components unmount.
+
+Prevent stale requests or realtime updates from overwriting newer data.
+
+Provide sensible error boundaries where supported.
+
+---
+
+# 17. FUNCTIONALITY CHECKLIST
+
+Before considering the build complete, verify each item.
+
+## Public website
+
+- [ ] Logo and brand identity are correctly displayed.
+- [ ] Movement Craft appears prominently near the top.
+- [ ] The tagline is displayed and comes from editable settings.
+- [ ] Offers are displayed from real published backend data.
+- [ ] Expired offers are hidden.
+- [ ] Services load dynamically from the database.
+- [ ] Clicking a service reveals its details.
+- [ ] Packages load dynamically from the database.
+- [ ] Clicking a package reveals its full details.
+- [ ] Unset prices do not appear as invented values.
+- [ ] Package customization works for eligible packages.
+- [ ] Add-on prices and totals update correctly.
+- [ ] Missing prices do not produce misleading totals.
+- [ ] WhatsApp opens with the correct prefilled enquiry.
+- [ ] Phone links work.
+- [ ] Instagram opens the supplied profile.
+- [ ] Gallery handles empty and populated states.
+- [ ] Testimonials appear only when genuinely supplied and published.
+- [ ] Terms and Conditions are accessible.
+- [ ] The website works on mobile and desktop.
+- [ ] No public customer login is required.
+- [ ] No payment or automatic booking flow exists.
+- [ ] The site remains usable when a request fails.
+
+## Admin panel
+
+- [ ] Login is protected by real authentication.
+- [ ] Anonymous users cannot modify content.
+- [ ] Only authorized admins can perform administrative actions.
+- [ ] Dashboard counts reflect actual backend data.
+- [ ] Services can be added, edited, hidden, and deleted.
+- [ ] Packages can be added, edited, hidden, and deleted.
+- [ ] The 25-package limit is enforced.
+- [ ] Add-ons can be managed separately for each package.
+- [ ] Offers can be added, edited, published, and expired.
+- [ ] Gallery items can be uploaded, edited, reordered, and deleted.
+- [ ] Testimonials can be managed.
+- [ ] Website text and contact details can be changed.
+- [ ] Images can be uploaded from a phone.
+- [ ] Changes persist after refreshing the browser.
+- [ ] Changes appear on the public site after saving.
+- [ ] Failed saves display an error instead of false success.
+- [ ] Destructive actions require confirmation.
+- [ ] Logout works correctly.
+
+## Backend and security
+
+- [ ] Database schema and migrations are documented.
+- [ ] RLS policies are configured.
+- [ ] Storage permissions are configured.
+- [ ] Public visitors can read only published public content.
+- [ ] Administrative mutations require authorization.
+- [ ] No secret key appears in frontend code or browser bundles.
+- [ ] Package-limit validation is enforced by trusted backend logic.
+- [ ] Database errors are handled gracefully.
+- [ ] The app does not depend on mock data in production.
+
+---
+
+# 18. HOW TO BUILD THE PROJECT
+
+Follow this implementation order.
+
+**Phase 1: Build the complete public frontend.**
+
+Create the homepage, header, hero, offers, service cards, package cards, detail views, customization interface, gallery, testimonials, contact section, and footer.
+
+Use the supplied logo and the two promotional images as the visual and content references.
+
+The result must already look polished and responsive.
+
+**Phase 2: Build the admin interface.**
+
+Create the private login page, dashboard, forms, content-management sections, image management, confirmation dialogs, and settings.
+
+Make the admin experience simple enough for a non-technical business owner.
+
+**Phase 3: Connect the backend.**
+
+Create the Supabase schema, migrations, authentication setup, RLS policies, storage policies, and data-access layer.
+
+Replace temporary development data with real database reads and writes.
+
+Ensure that admin changes persist and that the public site reads the latest published data.
+
+**Phase 4: Validate the complete application.**
+
+Test public and admin workflows, mobile layouts, pricing calculations, expired offers, empty states, permissions, uploads, and failure handling.
+
+Correct issues before calling the build complete.
+
+**Phase 5: Prepare deployment.**
+
+Provide the project files, installation steps, environment-variable template, database setup instructions, admin account setup instructions, and deployment steps for the selected free-tier hosting service.
+
+Do not publish private credentials in the repository.
+
+Do not claim that the site is live until it has actually been deployed and verified.
+
+---
+
+# 19. FINAL QUALITY STANDARD
+
+The finished website should feel like Movement Craft's own professional digital presence.
+
+It should not look like an untouched AI template. Avoid repetitive generic text, unnecessary gradient blobs, fake statistics, fake reviews, fake portfolio projects, invented discounts, meaningless animations, and decorative controls that do nothing.
+
+Focus on authentic branding, thoughtful composition, elegant black-and-gold styling, excellent mobile usability, and clear customer journeys.
+
+The website is an enquiry and service-discovery platform. It is not an automated booking engine, payment portal, or customer account system.
+
+The owner must have control over the published website through the private admin panel.
+
+**Most important acceptance criterion:** Once the backend is connected and the website is deployed, the owner should be able to log into the admin panel, edit a service or package, save the change, and see that change reflected on the public website without editing code or redeploying the application.
+
+Build the application to this standard. If a requirement cannot be completed with the current environment or available free-tier services, explain the exact limitation and implement the closest secure, functional alternative rather than silently substituting a mockup.
+
+Do not stop after presenting a plan. Start building the application now.

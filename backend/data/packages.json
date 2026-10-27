@@ -1,0 +1,174 @@
+[
+  {
+    "id": "birthday-surprise",
+    "title": "Birthday Surprise",
+    "subtitle": "Glamorous entry & celebratory birthday atmosphere",
+    "image": "/src/assets/images/surprise_birthday_celebration_1793027120311.jpg",
+    "badge": "Most Popular",
+    "startingPrice": 3499,
+    "discountedPrice": null,
+    "description": "Make birthdays unforgettable with grand sparkler pyrotechnics, atmospheric cold smoke, a custom designer cake, and professional high-definition reel coverage.",
+    "popular": true,
+    "isPublished": true,
+    "customizationEnabled": true,
+    "displayOrder": 1,
+    "terms": "Bookings should ideally be confirmed 24 hours prior. Exact sparkler timing coordinated directly.",
+    "inclusions": [
+      {
+        "text": "Fire Entry (Cold Pyro Fountains)"
+      },
+      {
+        "text": "Smoke Entry (Dry Ice Atmosphere)"
+      },
+      {
+        "text": "Birthday Cake (Fresh Designer Cake)"
+      },
+      {
+        "text": "Curated Return Gift"
+      },
+      {
+        "text": "Photography & Instagram Cinematic Reel"
+      }
+    ],
+    "addons": []
+  },
+  {
+    "id": "midnight-surprise",
+    "title": "Midnight Surprise",
+    "subtitle": "Secret 12:00 AM doorstep magical reveal",
+    "image": "/src/assets/images/hero_luxury_surprise_setup_1793027122212.jpg",
+    "badge": "Midnight 12 AM",
+    "startingPrice": 4299,
+    "discountedPrice": null,
+    "description": "The ultimate midnight greeting at the stroke of 12! Our secret team transforms your doorstep with warm candles, flowers, cake, and gift arrangements before they step outside.",
+    "popular": true,
+    "isPublished": true,
+    "customizationEnabled": true,
+    "displayOrder": 2,
+    "terms": "Arriving quietly by 11:30 PM. Complete stealth execution.",
+    "inclusions": [
+      {
+        "text": "Home Entrance & Pathway Decoration"
+      },
+      {
+        "text": "Midnight Birthday/Anniversary Cake",
+        "isOurSide": true
+      },
+      {
+        "text": "Special Ring / Curated Gift",
+        "isOurSide": true
+      },
+      {
+        "text": "Return Gift Box",
+        "isOurSide": true
+      },
+      {
+        "text": "Special Midnight Setup & Lighting"
+      }
+    ],
+    "addons": []
+  },
+  {
+    "id": "theatre-surprise",
+    "title": "Theatre Surprise",
+    "subtitle": "Private silver screen romance & video reveal",
+    "image": "/src/assets/images/surprise_theatre_midnight_1793027123086.jpg",
+    "badge": "Cinematic Luxury",
+    "startingPrice": 7999,
+    "discountedPrice": null,
+    "description": "Rent out or reserve a private theatre experience where a personal memories video plays right on the giant cinema screen during the interval, accompanied by sparkling pyrotechnics.",
+    "popular": false,
+    "isPublished": true,
+    "customizationEnabled": true,
+    "displayOrder": 3,
+    "terms": "Video clips must be sent 48 hours prior for theater format conversion.",
+    "inclusions": [
+      {
+        "text": "Grand Fire Entry"
+      },
+      {
+        "text": "Atmospheric Smoke Entry"
+      },
+      {
+        "text": "Big Screen Photo / Video Display"
+      },
+      {
+        "text": "Interval Surprise Clip & Audio"
+      },
+      {
+        "text": "Cake & Special Spotlight Moment"
+      }
+    ],
+    "addons": []
+  },
+  {
+    "id": "cafe-surprise",
+    "title": "Cafe Surprise",
+    "subtitle": "Candlelit dining & floral romantic ambiance",
+    "image": "/src/assets/images/hero_luxury_surprise_setup_1793027122212.jpg",
+    "badge": "Intimate Dinner",
+    "startingPrice": 2999,
+    "discountedPrice": null,
+    "description": "A private corner or rooftop cafe setup decorated with warm fairy lights, floral centerpieces, candles, and sweet surprises tailored for anniversaries and date nights.",
+    "popular": false,
+    "isPublished": true,
+    "customizationEnabled": true,
+    "displayOrder": 4,
+    "terms": "Food and beverages are as per cafe menu or pre-coordinated.",
+    "inclusions": [
+      {
+        "text": "Premium Cafe & Table Decoration"
+      },
+      {
+        "text": "Custom Celebration Cake",
+        "isOurSide": true
+      },
+      {
+        "text": "Special Ring or Gift",
+        "isOurSide": true
+      },
+      {
+        "text": "Return Gift Package",
+        "isOurSide": true
+      },
+      {
+        "text": "Photography & Keepsake Reel"
+      }
+    ],
+    "addons": []
+  },
+  {
+    "id": "proposal-surprise",
+    "title": "Proposal or Special Surprise",
+    "subtitle": "Say 'Yes' under a fairy-lit flower heart arch",
+    "image": "/src/assets/images/surprise_romantic_proposal_1793027122863.jpg",
+    "badge": "Will You Marry Me?",
+    "startingPrice": 6499,
+    "discountedPrice": null,
+    "description": "The dream proposal setup with an illuminated giant rose arch, candlelit red carpet aisle, 'Will You Marry Me' marquee sign, ring pedestal, and cinematic 4K video reel capture.",
+    "popular": true,
+    "isPublished": true,
+    "customizationEnabled": true,
+    "displayOrder": 5,
+    "terms": "Outdoor setups depend on weather. Backup indoor arrangements prepared.",
+    "inclusions": [
+      {
+        "text": "Romantic Floral Arch & Fairy Light Decor"
+      },
+      {
+        "text": "Special Red Carpet Entry Pathway"
+      },
+      {
+        "text": "Spotlight Ring Setup & Pedestal"
+      },
+      {
+        "text": "Gourmet Celebration Cake",
+        "isOurSide": true
+      },
+      {
+        "text": "Cinematic Photography & 4K Romantic Reel"
+      }
+    ],
+    "addons": []
+  }
+]

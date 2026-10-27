@@ -1,0 +1,8 @@
+{
+  "name": "Movement Craft — Surprise Events & Special Moments",
+  "description": "Discover surprise event planning, birthday celebrations, romantic setups, proposal surprises, and special moments with Movement Craft in Chhatrapati Sambhaji Nagar, Maharashtra.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
