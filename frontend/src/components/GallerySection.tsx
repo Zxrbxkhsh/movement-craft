@@ -11,7 +11,7 @@ export const GallerySection: React.FC = () => {
       title: "Rooftop Starlight Proposal Arch",
       category: "proposal",
       tag: "Proposal",
-      image: "/src/assets/images/surprise_romantic_proposal_1793027122863.jpg",
+      image: "/assets/images/surprise_romantic_proposal_1793027122863.jpg",
       location: "Beed Bypass Rooftop"
     },
     {
@@ -19,7 +19,7 @@ export const GallerySection: React.FC = () => {
       title: "Grand Birthday with Cold Pyros & Fog",
       category: "birthday",
       tag: "Birthday",
-      image: "/src/assets/images/surprise_birthday_celebration_1793027120311.jpg",
+      image: "/assets/images/surprise_birthday_celebration_1793027120311.jpg",
       location: "Private Villa, Connaught Place"
     },
     {
@@ -27,7 +27,7 @@ export const GallerySection: React.FC = () => {
       title: "Silver Screen Theatre Tribute & Sparklers",
       category: "theatre",
       tag: "Theatre",
-      image: "/src/assets/images/surprise_theatre_midnight_1793027123086.jpg",
+      image: "/assets/images/surprise_theatre_midnight_1793027123086.jpg",
       location: "Private Auditorium, Jalna Road"
     },
     {
@@ -35,7 +35,7 @@ export const GallerySection: React.FC = () => {
       title: "Intimate Candlelight Courtyard Surprise",
       category: "midnight",
       tag: "Midnight / Cafe",
-      image: "/src/assets/images/hero_luxury_surprise_setup_1793027122212.jpg",
+      image: "/assets/images/hero_luxury_surprise_setup_1793027122212.jpg",
       location: "Open Terrace, CIDCO"
     }
   ];

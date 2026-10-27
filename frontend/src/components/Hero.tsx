@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles, ArrowRight, Shield, Clock, Camera, Flame } from 'lucide-react';
 import { BusinessConfig } from '../types';
+import heroImage from '../assets/images/hero_luxury_surprise_setup_1793027122212.jpg';
 
 interface HeroProps {
   config: BusinessConfig;
@@ -84,9 +85,12 @@ export const Hero: React.FC<HeroProps> = ({ config, onOpenCustomizer, onOpenBroc
             <div className="relative mx-auto max-w-md lg:max-w-none rounded-2xl overflow-hidden border border-[#D4AF37]/40 p-2 bg-[#12110D] shadow-2xl gold-glow">
               <div className="relative h-96 sm:h-[460px] rounded-xl overflow-hidden">
                 <img
-                  src="/src/assets/images/hero_luxury_surprise_setup_1793027122212.jpg"
+                  src={heroImage}
                   alt="Luxury Surprise Event Setup by Movement Craft"
                   className="w-full h-full object-cover brightness-95 hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/assets/images/hero_luxury_surprise_setup_1793027122212.jpg';
+                  }}
                 />
                 
                 {/* Gradient overlay */}
