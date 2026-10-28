@@ -5,6 +5,25 @@ const TOKEN_KEY = 'mc_admin_session_token';
 const LOCAL_PACKAGES_KEY = 'mc_packages_cache_v2';
 const LOCAL_CONFIG_KEY = 'mc_config_cache_v2';
 
+// -------------------------------------------------------------
+// API BASE URL CONFIGURATION
+// -------------------------------------------------------------
+// Priority:
+// 1. Explicit VITE_API_URL environment variable (configured in Vercel/local env)
+// 2. Automatic fallback to deployed Render backend when hosted on Vercel
+// 3. Relative '/api' path for local development and same-domain reverse proxies
+export const API_BASE_URL: string = (
+  (import.meta.env.VITE_API_URL as string | undefined)?.trim() ||
+  (typeof window !== 'undefined' && window.location.hostname.endsWith('vercel.app')
+    ? 'https://movement-craft.onrender.com'
+    : '')
+).replace(/\/+$/, '');
+
+export function getApiUrl(path: string): string {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return `${API_BASE_URL}${cleanPath}`;
+}
+
 export function getStoredAdminToken(): string | null {
   return sessionStorage.getItem(TOKEN_KEY);
 }
@@ -22,23 +41,50 @@ export function setStoredAdminToken(token: string | null): void {
 // -------------------------------------------------------------
 export async function loginAdminApi(password: string): Promise<{ success: boolean; error?: string }> {
   try {
-    const res = await fetch('/api/admin/login', {
+    const res = await fetch(getApiUrl('/api/admin/login'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ password })
     });
 
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      if (res.status === 404) {
+        return {
+          success: false,
+          error: 'Authentication endpoint not found (404). Please ensure the backend is running and API URL is configured.'
+        };
+      }
+      return {
+        success: false,
+        error: `Authentication server returned unexpected status ${res.status} (${res.statusText || 'non-JSON response'}).`
+      };
+    }
+
     const data = await res.json();
     if (!res.ok || !data.success) {
       setStoredAdminToken(null);
-      return { success: false, error: data.error || 'Authentication failed. Invalid administrator credentials.' };
+      return {
+        success: false,
+        error: data.error || 'Authentication failed. Invalid administrator credentials.'
+      };
     }
 
     setStoredAdminToken(data.token);
     return { success: true };
   } catch (err: any) {
     console.error('Server login request failed:', err);
-    return { success: false, error: 'Could not connect to authentication server. Please check your network.' };
+    const msg = err?.message || '';
+    if (msg.includes('Failed to fetch') || msg.includes('NetworkError') || msg.includes('abort')) {
+      return {
+        success: false,
+        error: 'Could not connect to backend server. If using a free Render instance, it may be waking up from sleep (takes 30-50s). Please wait a moment and try again.'
+      };
+    }
+    return {
+      success: false,
+      error: `Could not connect to authentication server: ${msg || 'Please check your network connection.'}`
+    };
   }
 }
 
@@ -47,13 +93,17 @@ export async function checkAdminAuthApi(): Promise<boolean> {
   if (!token) return false;
 
   try {
-    const res = await fetch('/api/admin/check', {
+    const res = await fetch(getApiUrl('/api/admin/check'), {
       headers: {
         'Authorization': `Bearer ${token}`
       }
     });
     if (!res.ok) {
       setStoredAdminToken(null);
+      return false;
+    }
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
       return false;
     }
     const data = await res.json();
@@ -71,7 +121,7 @@ export async function logoutAdminApi(): Promise<void> {
   const token = getStoredAdminToken();
   if (token) {
     try {
-      await fetch('/api/admin/logout', {
+      await fetch(getApiUrl('/api/admin/logout'), {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -93,8 +143,9 @@ export async function fetchPackagesApi(): Promise<SurprisePackage[]> {
   }
 
   try {
-    const res = await fetch('/api/packages', { headers });
-    if (res.ok) {
+    const res = await fetch(getApiUrl('/api/packages'), { headers });
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
       const data: SurprisePackage[] = await res.json();
       localStorage.setItem(LOCAL_PACKAGES_KEY, JSON.stringify(data));
       return data;
@@ -122,7 +173,7 @@ export async function savePackageApi(pkg: SurprisePackage, isNew: boolean): Prom
   }
 
   try {
-    const url = isNew ? '/api/packages' : `/api/packages/${pkg.id}`;
+    const url = getApiUrl(isNew ? '/api/packages' : `/api/packages/${pkg.id}`);
     const method = isNew ? 'POST' : 'PUT';
 
     const res = await fetch(url, {
@@ -133,6 +184,11 @@ export async function savePackageApi(pkg: SurprisePackage, isNew: boolean): Prom
       },
       body: JSON.stringify(pkg)
     });
+
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      return { success: false, error: `Server returned error (${res.status} ${res.statusText})` };
+    }
 
     const data = await res.json();
     if (!res.ok) {
@@ -153,12 +209,17 @@ export async function deletePackageApi(id: string): Promise<{ success: boolean; 
   }
 
   try {
-    const res = await fetch(`/api/packages/${id}`, {
+    const res = await fetch(getApiUrl(`/api/packages/${id}`), {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`
       }
     });
+
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      return { success: false, error: `Server returned error (${res.status} ${res.statusText})` };
+    }
 
     const data = await res.json();
     if (!res.ok) {
@@ -201,7 +262,7 @@ export async function uploadPackagePhotoApi(file: File): Promise<{ success: bool
       reader.readAsDataURL(file);
     });
 
-    const res = await fetch('/api/upload', {
+    const res = await fetch(getApiUrl('/api/upload'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -214,12 +275,22 @@ export async function uploadPackagePhotoApi(file: File): Promise<{ success: bool
       })
     });
 
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      return { success: false, error: `Server returned error (${res.status} ${res.statusText})` };
+    }
+
     const data = await res.json();
     if (!res.ok || !data.success) {
       return { success: false, error: data.error || 'Failed to upload photo to server.' };
     }
 
-    return { success: true, url: data.url };
+    let photoUrl = data.url;
+    if (photoUrl && photoUrl.startsWith('/uploads/') && API_BASE_URL) {
+      photoUrl = `${API_BASE_URL}${photoUrl}`;
+    }
+
+    return { success: true, url: photoUrl };
   } catch (err: any) {
     console.error('Upload error:', err);
     return { success: false, error: 'Network error while uploading photo.' };
@@ -231,8 +302,9 @@ export async function uploadPackagePhotoApi(file: File): Promise<{ success: bool
 // -------------------------------------------------------------
 export async function fetchConfigApi(): Promise<BusinessConfig> {
   try {
-    const res = await fetch('/api/config');
-    if (res.ok) {
+    const res = await fetch(getApiUrl('/api/config'));
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
       const data = await res.json();
       if (data && data.name) {
         localStorage.setItem(LOCAL_CONFIG_KEY, JSON.stringify(data));
@@ -259,7 +331,7 @@ export async function saveConfigApi(config: BusinessConfig): Promise<{ success: 
   }
 
   try {
-    const res = await fetch('/api/config', {
+    const res = await fetch(getApiUrl('/api/config'), {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -267,6 +339,12 @@ export async function saveConfigApi(config: BusinessConfig): Promise<{ success: 
       },
       body: JSON.stringify(config)
     });
+
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      return { success: false, error: `Server returned error (${res.status} ${res.statusText})` };
+    }
+
     const data = await res.json();
     if (!res.ok) {
       return { success: false, error: data.error || 'Failed to update config.' };
@@ -283,16 +361,19 @@ export async function saveConfigApi(config: BusinessConfig): Promise<{ success: 
 // -------------------------------------------------------------
 export async function submitInquiryApi(inquiry: Partial<InquiryItem>): Promise<{ success: boolean; error?: string; inquiryId?: string }> {
   try {
-    const res = await fetch('/api/inquiries', {
+    const res = await fetch(getApiUrl('/api/inquiries'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(inquiry)
     });
-    const data = await res.json();
-    if (!res.ok || !data.success) {
-      return { success: false, error: data.error || 'Failed to submit booking inquiry.' };
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
+      const data = await res.json();
+      if (data && data.success) {
+        return { success: true, inquiryId: data.inquiryId };
+      }
     }
-    return { success: true, inquiryId: data.inquiryId };
+    return { success: true };
   } catch (e: any) {
     console.error('Error submitting inquiry to server:', e);
     // WhatsApp direct communication is the primary bridge; keep experience uninterrupted
@@ -305,10 +386,11 @@ export async function fetchInquiriesApi(): Promise<InquiryItem[]> {
   if (!token) return [];
 
   try {
-    const res = await fetch('/api/inquiries', {
+    const res = await fetch(getApiUrl('/api/inquiries'), {
       headers: { 'Authorization': `Bearer ${token}` }
     });
-    if (res.ok) {
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
       return await res.json();
     }
   } catch (e) {
@@ -322,7 +404,7 @@ export async function updateInquiryStatusApi(id: string, status: string): Promis
   if (!token) return { success: false, error: 'Unauthorized.' };
 
   try {
-    const res = await fetch(`/api/inquiries/${id}/status`, {
+    const res = await fetch(getApiUrl(`/api/inquiries/${id}/status`), {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -330,6 +412,10 @@ export async function updateInquiryStatusApi(id: string, status: string): Promis
       },
       body: JSON.stringify({ status })
     });
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      return { success: false, error: `Server error (${res.status})` };
+    }
     const data = await res.json();
     return { success: data.success, error: data.error };
   } catch (e: any) {
@@ -342,8 +428,9 @@ export async function updateInquiryStatusApi(id: string, status: string): Promis
 // -------------------------------------------------------------
 export async function fetchAddonsApi(): Promise<AddonItem[]> {
   try {
-    const res = await fetch('/api/addons');
-    if (res.ok) {
+    const res = await fetch(getApiUrl('/api/addons'));
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
       const data = await res.json();
       if (Array.isArray(data) && data.length > 0) {
         return data;
@@ -357,8 +444,9 @@ export async function fetchAddonsApi(): Promise<AddonItem[]> {
 
 export async function fetchServicesApi(): Promise<SurpriseService[]> {
   try {
-    const res = await fetch('/api/services');
-    if (res.ok) {
+    const res = await fetch(getApiUrl('/api/services'));
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
       const data = await res.json();
       if (Array.isArray(data) && data.length > 0) {
         return data;
@@ -381,8 +469,9 @@ export async function fetchStatusApi(): Promise<{
   serverTime: string;
 } | null> {
   try {
-    const res = await fetch('/api/status');
-    if (res.ok) {
+    const res = await fetch(getApiUrl('/api/status'));
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
       return await res.json();
     }
   } catch (e) {

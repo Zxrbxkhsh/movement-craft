@@ -21,9 +21,15 @@ const PORT = process.env.PORT || 3000;
 const isProduction = process.env.NODE_ENV === 'production';
 
 // CORS configuration for local development and production
-const corsOrigin = process.env.CORS_ORIGIN || '*';
+const corsOriginEnv = process.env.CORS_ORIGIN || '*';
+const allowedOrigins = corsOriginEnv === '*'
+  ? true
+  : corsOriginEnv.includes(',')
+    ? corsOriginEnv.split(',').map((s: string) => s.trim())
+    : corsOriginEnv;
+
 app.use(cors({
-  origin: corsOrigin === '*' ? true : corsOrigin,
+  origin: allowedOrigins,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
