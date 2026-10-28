@@ -6,7 +6,7 @@ A full-stack web application designed for **Movement Craft**, a luxury surprise 
 
 ## Live Demo
 
-- **Live Preview:** [vercel]()
+- **Live Preview:** [vercel](https://movement-craft.vercel.app/)
 
 
 ---
@@ -127,8 +127,7 @@ movement-craft/
 ## Author
 
 - **Zarbaksh Khan**
-  - GitHub: [Zarbaksh Khan]()
-  - LinkedIn: [Zarbaksh Khan]()
+  - GitHub: [Zarbaksh Khan](https://github.com/Zxrbxkhsh)
 
 ---
 
